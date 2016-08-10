@@ -7,6 +7,7 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   background-color: #f1f1f1;
+  height: 100%;
 }
 
 h1 {
@@ -14,7 +15,12 @@ h1 {
   color: #F97F85;
 }
 
+#app {
+  height: 100%;
+}
+
 :global(#container) {
+  height: 100%;
   width: 100%;
 
   @media (min-width: 960px) {

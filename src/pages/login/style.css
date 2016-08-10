@@ -1,19 +1,22 @@
 .content {
   margin-top: 50px;
+  text-align: center;
 }
 
 .heading {
-  font-size: 10vw;
+  display: block;
+  font-size: 8vw;
 }
 
 .lead {
-  display: inline-block;
+  display: block;
   margin-right: 20px;
   font-size: 3vw;
 }
 
 .signUpButton {
   display: inline-block;
+  margin: 5px;
   padding: 1vw 2vw;
   border: 0;
   font-size: 2vw;
