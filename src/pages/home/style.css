@@ -3,11 +3,13 @@
 }
 
 .pageContent {
+  display: inline-block;
+  position: relative;
   padding: 10px;
-  width: 100%;
+  width: auto;
 }
 
 .welcomeText {
-  font-size: 20px;
+  font-size: 18px;
   color: #7F7F7F;
 }

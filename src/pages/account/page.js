@@ -11,6 +11,9 @@ export default class AccountPage extends React.Component {
       <div className={styles.account} >
         <TopMenuBar />
         <LeftSidebar />
+        <div className={styles.content} >
+          <h4 className={styles.header} >Account page</h4>
+        </div>
       </div>
     );
   }

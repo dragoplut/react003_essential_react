@@ -5,6 +5,7 @@
   border-top: none;
   display: inline-block;
   float: left;
+  position: relative;
   height: calc(100vh - 64px);
   width: 210px;
 }

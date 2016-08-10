@@ -14,12 +14,16 @@ export default class LeftSidebar extends React.Component {
   };
 
   handleDialogOpen = () => {
-    this.setState({openDialog: true});
+    this.setState({openDialog: true, message: 'Confirm Reset Something'});
   };
 
   handleDialogClose = (resp) => {
     if (resp) this.setState({openDialog: resp.open});
   };
+
+  toAccount() {
+    browserHistory.push('/account')
+  }
 
   toHome() {
     browserHistory.push('/home')
@@ -31,6 +35,10 @@ export default class LeftSidebar extends React.Component {
         <List>
           <Subheader>Account Menu</Subheader>
           <Divider />
+          <ListItem
+            primaryText="Account Page"
+            onClick={this.toAccount}
+          />
           <ListItem
             primaryText="Home Page"
             onClick={this.toHome}
@@ -49,7 +57,7 @@ export default class LeftSidebar extends React.Component {
             onClick={this.handleDialogOpen}
           />
         </List>
-        <ConfirmDialog isOpen={this.state.openDialog} onHandleClose={this.handleDialogClose} />
+        <ConfirmDialog isOpen={this.state.openDialog} onHandleClose={this.handleDialogClose} message={this.state.message} />
       </div>
     );
   }
