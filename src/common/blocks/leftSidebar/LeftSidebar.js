@@ -15,7 +15,10 @@ export default class LeftSidebar extends React.Component {
 
   handleDialogOpen = () => {
     this.setState({openDialog: true});
-    //console.log('Something happened!!!', this.state.openDialog);
+  };
+
+  handleDialogClose = (resp) => {
+    if (resp) this.setState({openDialog: resp.open});
   };
 
   toHome() {
@@ -23,7 +26,6 @@ export default class LeftSidebar extends React.Component {
   }
 
   render() {
-    //var openDialog = this.state.openDialog;
     return (
       <div className={styles.sidebar}>
         <List>
@@ -47,7 +49,7 @@ export default class LeftSidebar extends React.Component {
             onClick={this.handleDialogOpen}
           />
         </List>
-        <ConfirmDialog isOpen={this.state.openDialog} />
+        <ConfirmDialog isOpen={this.state.openDialog} onHandleClose={this.handleDialogClose} />
       </div>
     );
   }

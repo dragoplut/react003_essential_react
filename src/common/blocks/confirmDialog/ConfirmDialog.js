@@ -7,15 +7,17 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 export default class ConfirmDialog extends React.Component {
   state = {
-    open: true
+    open: false,
+    isMount: false
   };
 
-  handleClose = () => {
-    this.setState({open: false});
+  handleClose = (e) => {
+    if (e) e.preventDefault();
+    this.props.onHandleClose({open: false, action: false});
   };
 
   componentDidMount() {
-    //this.setState({open: this.props.openDialog});
+    this.setState({isMount: true});
   };
 
   render() {
@@ -38,7 +40,7 @@ export default class ConfirmDialog extends React.Component {
           title="Confirm"
           actions={actions}
           modal={false}
-          open={this.state.open}
+          open={this.props.isOpen}
           onRequestClose={this.handleClose}
         >
           Are you sure about this?
